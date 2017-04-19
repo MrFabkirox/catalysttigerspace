@@ -105,7 +105,7 @@ sub base :Chained('/') :PathPart('books') :CaptureArgs(0) {
     $c->stash(resultset => $c->model('DB::Book'));
 
     # Print a message to the debug log
-    $c->log->debug('*** INSIDE BASE METHOD ***');
+    $c->log->debug('__________________INSIDE BASE METHOD_____________________');
 }
 
 =head2 url_create
