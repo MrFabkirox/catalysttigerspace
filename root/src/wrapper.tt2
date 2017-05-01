@@ -20,7 +20,8 @@
 <div id="menu">
     Navigation:
     <ul>
-        <li><a href="[% c.uri_for('/books/list') %]">Home</a></li>
+        <li><a href="[% c.uri_for('/books/list') %]">List</a></li>
+        <li><a href="[% c.uri_for('/quotes/quotes_list') %]">Quotes</a></li>
         <li><a href="[% c.uri_for('/')
             %]" title="Catalyst Welcome Page">Welcome</a></li>
     </ul>

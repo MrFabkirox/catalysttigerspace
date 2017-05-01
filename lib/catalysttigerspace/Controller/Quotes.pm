@@ -58,15 +58,17 @@ sub quotes :Chained('/') :PathPart('quotes') :CaptureArgs(0) {
 =cut
 
 __PACKAGE__->meta->make_immutable;
-
+ 
 =head2 quote_list
 
 =cut
 
 sub quotes_list :Chained('quotes') :PathPart('quotes_list') :Args(0) {
     my ( $self, $c ) = @_;
+my $toto = '$toto';
+    $c->stash($toto => '$toto');
 
-    $c->log->debug('__________________ quote_list __________________');
+    $c->log->debug('________ quote_list s________');
     $c->stash(template => 'quotes/quotes.tt2');
 }
 1;

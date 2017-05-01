@@ -2,11 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d9615256-d562-445f-a168-ebcb9f6f570d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/root/src/quotes/quotes.tt2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/root/src/quotes/world.tt2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/perl5local.xml" afterPath="$PROJECT_DIR$/.idea/perl5local.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/catalysttigerspace/Controller/Books.pm" afterPath="$PROJECT_DIR$/lib/catalysttigerspace/Controller/Books.pm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalysttigerspace02.sql" afterPath="$PROJECT_DIR$/catalysttigerspace02.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/catalysttigerspace/Controller/Login.pm" afterPath="$PROJECT_DIR$/lib/catalysttigerspace/Controller/Login.pm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/catalysttigerspace/Controller/Logout.pm" afterPath="$PROJECT_DIR$/lib/catalysttigerspace/Controller/Logout.pm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/catalysttigerspace/Controller/Quotes.pm" afterPath="$PROJECT_DIR$/lib/catalysttigerspace/Controller/Quotes.pm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/catalysttigerspace/Schema/Result/Role.pm" afterPath="$PROJECT_DIR$/lib/catalysttigerspace/Schema/Result/Role.pm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/catalysttigerspace/Schema/Result/User.pm" afterPath="$PROJECT_DIR$/lib/catalysttigerspace/Schema/Result/User.pm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/catalysttigerspace/Schema/Result/UserRole.pm" afterPath="$PROJECT_DIR$/lib/catalysttigerspace/Schema/Result/UserRole.pm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/catalysttigerspace/Schema/ResultSet/Book.pm" afterPath="$PROJECT_DIR$/lib/catalysttigerspace/Schema/ResultSet/Book.pm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/root/src/error_noperms.tt2" afterPath="$PROJECT_DIR$/root/src/error_noperms.tt2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/root/src/login.tt2" afterPath="$PROJECT_DIR$/root/src/login.tt2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/root/src/quotes/quotes.tt2" afterPath="$PROJECT_DIR$/root/src/quotes/quotes.tt2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/root/src/wrapper.tt2" afterPath="$PROJECT_DIR$/root/src/wrapper.tt2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/t/controller_Login.t" afterPath="$PROJECT_DIR$/t/controller_Login.t" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/t/controller_Logout.t" afterPath="$PROJECT_DIR$/t/controller_Logout.t" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/t/controller_Quotes.t" afterPath="$PROJECT_DIR$/t/controller_Quotes.t" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,34 +36,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="User.pm" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/catalysttigerspace/Schema/Result/User.pm">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3380">
-              <caret line="182" column="0" lean-forward="false" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
-              <folding>
-                <element signature="e#61#101#0#Perl5" expanded="true" />
-                <element signature="e#235#245#0#Perl5" expanded="true" />
-                <element signature="e#2112#2183#0#Perl5" expanded="true" />
-                <element signature="e#2392#2409#0#Perl5" expanded="true" />
-                <element signature="e#2780#2842#0#Perl5" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Books.pm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/catalysttigerspace/Controller/Books.pm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2080">
-              <caret line="116" column="0" lean-forward="false" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
-              <folding>
-                <element signature="e#2815#2886#0#Perl5" expanded="true" />
-                <element signature="e#3156#3212#0#Perl5" expanded="true" />
-                <element signature="e#3420#3478#0#Perl5" expanded="true" />
-                <element signature="e#3579#3616#0#Perl5" expanded="true" />
-                <element signature="e#5547#5606#0#Perl5" expanded="true" />
-              </folding>
+            <state relative-caret-position="1160">
+              <caret line="58" column="40" lean-forward="false" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -56,13 +49,9 @@
       <file leaf-file-name="Root.pm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/catalysttigerspace/Controller/Root.pm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2140">
+            <state relative-caret-position="2360">
               <caret line="118" column="0" lean-forward="false" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
-              <folding>
-                <element signature="e#126#127#0#Perl5" expanded="true" />
-                <element signature="e#891#961#0#Perl5" expanded="true" />
-                <element signature="e#1161#1221#0#Perl5" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -77,14 +66,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Quotes.pm" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Quotes.pm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/catalysttigerspace/Controller/Quotes.pm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="51" column="10" lean-forward="false" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
-              <folding>
-                <element signature="e#48#58#0#Perl5" expanded="true" />
-              </folding>
+            <state relative-caret-position="446">
+              <caret line="70" column="41" lean-forward="false" selection-start-line="70" selection-start-column="41" selection-end-line="70" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="catalysttigerspace02.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalysttigerspace02.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="660">
+              <caret line="33" column="36" lean-forward="false" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -92,18 +89,18 @@
       <file leaf-file-name="HTML.pm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/catalysttigerspace/View/HTML.pm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
+            <state relative-caret-position="160">
               <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wrapper.tt2" pinned="false" current-in-tab="false">
+      <file leaf-file-name="wrapper.tt2" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/root/src/wrapper.tt2">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="666">
-              <caret line="34" column="26" lean-forward="false" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+            <state relative-caret-position="314">
+              <caret line="23" column="42" lean-forward="false" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -112,7 +109,7 @@
       <file leaf-file-name="world.tt2" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/root/src/quotes/world.tt2">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="458">
+            <state relative-caret-position="1260">
               <caret line="63" column="64" lean-forward="false" selection-start-line="63" selection-start-column="64" selection-end-line="63" selection-end-column="64" />
               <folding />
             </state>
@@ -122,8 +119,8 @@
       <file leaf-file-name="quotes.tt2" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/root/src/quotes/quotes.tt2">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-40">
-              <caret line="37" column="76" lean-forward="false" selection-start-line="37" selection-start-column="76" selection-end-line="37" selection-end-column="76" />
+            <state relative-caret-position="1300">
+              <caret line="65" column="34" lean-forward="false" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -132,7 +129,7 @@
       <file leaf-file-name="Makefile.PL" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Makefile.PL">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
+            <state relative-caret-position="460">
               <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
@@ -167,7 +164,6 @@
         <option value="$PROJECT_DIR$/lib/catalysttigerspace/Controller/Login.pm" />
         <option value="$PROJECT_DIR$/lib/catalysttigerspace/Controller/Logout.pm" />
         <option value="$PROJECT_DIR$/root/src/login.tt2" />
-        <option value="$PROJECT_DIR$/root/src/wrapper.tt2" />
         <option value="$PROJECT_DIR$/lib/catalysttigerspace.pm" />
         <option value="$PROJECT_DIR$/root/src/books/list.tt2" />
         <option value="$PROJECT_DIR$/lib/catalysttigerspace/Schema/Result/Book.pm" />
@@ -175,10 +171,11 @@
         <option value="$PROJECT_DIR$/Makefile.PL" />
         <option value="$PROJECT_DIR$/lib/catalysttigerspace/Controller/Root.pm" />
         <option value="$PROJECT_DIR$/root/src/error_noperms.tt2" />
-        <option value="$PROJECT_DIR$/root/src/quotes/quotes.tt2" />
         <option value="$PROJECT_DIR$/lib/catalysttigerspace/Controller/Books.pm" />
         <option value="$PROJECT_DIR$/root/src/quotes/world.tt2" />
+        <option value="$PROJECT_DIR$/root/src/quotes/quotes.tt2" />
         <option value="$PROJECT_DIR$/lib/catalysttigerspace/Controller/Quotes.pm" />
+        <option value="$PROJECT_DIR$/root/src/wrapper.tt2" />
       </list>
     </option>
   </component>
@@ -186,7 +183,7 @@
     <option name="x" value="64" />
     <option name="y" value="-11" />
     <option name="width" value="1217" />
-    <option name="height" value="812" />
+    <option name="height" value="742" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -225,7 +222,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -484,12 +480,13 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -513,61 +510,6 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="#PerlConfigurationType" factoryName="Perl" show_console_on_std_err="false" show_console_on_std_out="false">
-      <option name="alternativeSdkPath" />
-      <option name="compileTimeBreakpointsEnabled" value="false" />
-      <option name="consoleCharset" />
-      <option name="envs">
-        <map />
-      </option>
-      <option name="nonInteractiveModeEnabled" value="false" />
-      <option name="passParentEnvs" value="true" />
-      <option name="perlParameters" value="" />
-      <option name="programParameters" />
-      <option name="scriptPath" />
-      <option name="useAlternativeSdk" value="false" />
-      <option name="workingDirectory" />
-      <option name="SCRIPT_PATH" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="PERL_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENVS">
-        <map />
-      </option>
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="CHARSET" />
-      <option name="USE_ALTERNATIVE_SDK" value="false" />
-      <option name="ALTERNATIVE_SDK_PATH" />
-      <option name="scriptCharset" value="utf8" />
-      <option name="startMode" value="RUN" />
-      <option name="isNonInteractiveModeEnabled" value="false" />
-      <option name="isCompileTimeBreakpointsEnabled" value="false" />
-      <option name="initCode" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="OdpsPythonConfigurationType" factoryName="MaxCompute Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="catalysttigerspace" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="PROJECT_NAME" value="" />
-      <option name="TABLE_NAME" value="" />
-      <option name="TABLE_COLUMNS" value="" />
-      <option name="TABLE_PARTITION" value="" />
-      <option name="MAIN_CLASS" value="" />
-      <method />
-    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -656,34 +598,34 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="1217" height="812" extended-state="6" />
+    <frame x="64" y="-11" width="1217" height="742" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28065842" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28143713" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="MaxCompute Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="MaxCompute Job Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Running Info" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Running Result" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="MaxCompute Project Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="MaxCompute Job Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="MaxCompute Project Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="MaxCompute Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Running Info" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Running Result" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -731,7 +673,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -740,11 +681,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="8" column="55" lean-forward="false" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="55" />
-          <folding>
-            <element signature="e#126#127#0#Perl5" expanded="true" />
-            <element signature="e#891#961#0#Perl5" expanded="true" />
-            <element signature="e#1161#1221#0#Perl5" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -758,7 +695,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -767,11 +703,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="8" column="55" lean-forward="false" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="55" />
-          <folding>
-            <element signature="e#126#127#0#Perl5" expanded="true" />
-            <element signature="e#891#961#0#Perl5" expanded="true" />
-            <element signature="e#1161#1221#0#Perl5" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -786,7 +718,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -835,13 +766,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/catalysttigerspace02.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="33" column="36" lean-forward="false" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/catalysttigerspace/Schema/ResultSet/Book.pm">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -881,7 +805,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -889,7 +812,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="920">
           <caret line="46" column="29" lean-forward="false" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -897,32 +819,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3340">
           <caret line="182" column="0" lean-forward="false" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
-          <folding>
-            <element signature="e#1896#1967#0#Perl5" expanded="true" />
-            <element signature="e#2175#2192#0#Perl5" expanded="true" />
-            <element signature="e#2577#2578#0#Perl5" expanded="true" />
-            <element signature="e#2935#3011#0#Perl5" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/catalysttigerspace/Schema/Result/User.pm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3380">
+        <state relative-caret-position="3640">
           <caret line="182" column="0" lean-forward="false" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
-          <folding>
-            <element signature="e#61#101#0#Perl5" expanded="true" />
-            <element signature="e#235#245#0#Perl5" expanded="true" />
-            <element signature="e#2112#2183#0#Perl5" expanded="true" />
-            <element signature="e#2392#2409#0#Perl5" expanded="true" />
-            <element signature="e#2780#2842#0#Perl5" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Makefile.PL">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
+        <state relative-caret-position="460">
           <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
@@ -930,13 +839,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/catalysttigerspace/Controller/Root.pm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2140">
+        <state relative-caret-position="2360">
           <caret line="118" column="0" lean-forward="false" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
-          <folding>
-            <element signature="e#126#127#0#Perl5" expanded="true" />
-            <element signature="e#891#961#0#Perl5" expanded="true" />
-            <element signature="e#1161#1221#0#Perl5" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -948,23 +853,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/catalysttigerspace/Controller/Books.pm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2080">
-          <caret line="116" column="0" lean-forward="false" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
-          <folding>
-            <element signature="e#2815#2886#0#Perl5" expanded="true" />
-            <element signature="e#3156#3212#0#Perl5" expanded="true" />
-            <element signature="e#3420#3478#0#Perl5" expanded="true" />
-            <element signature="e#3579#3616#0#Perl5" expanded="true" />
-            <element signature="e#5547#5606#0#Perl5" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/root/src/quotes/world.tt2">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
+        <state relative-caret-position="1260">
           <caret line="63" column="64" lean-forward="false" selection-start-line="63" selection-start-column="64" selection-end-line="63" selection-end-column="64" />
           <folding />
         </state>
@@ -972,35 +863,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/catalysttigerspace/View/HTML.pm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
+        <state relative-caret-position="160">
           <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/root/src/wrapper.tt2">
+    <entry file="file://$PROJECT_DIR$/catalysttigerspace02.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="34" column="26" lean-forward="false" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+        <state relative-caret-position="660">
+          <caret line="33" column="36" lean-forward="false" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/catalysttigerspace/Controller/Books.pm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1160">
+          <caret line="58" column="40" lean-forward="false" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/root/src/quotes/quotes.tt2">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-40">
-          <caret line="37" column="76" lean-forward="false" selection-start-line="37" selection-start-column="76" selection-end-line="37" selection-end-column="76" />
+        <state relative-caret-position="1300">
+          <caret line="65" column="34" lean-forward="false" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/catalysttigerspace/Controller/Quotes.pm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="51" column="10" lean-forward="false" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
-          <folding>
-            <element signature="e#48#58#0#Perl5" expanded="true" />
-          </folding>
+        <state relative-caret-position="446">
+          <caret line="70" column="41" lean-forward="false" selection-start-line="70" selection-start-column="41" selection-end-line="70" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/root/src/wrapper.tt2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="23" column="42" lean-forward="false" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>

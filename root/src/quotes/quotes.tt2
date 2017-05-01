@@ -62,3 +62,5 @@
   <a href="[% c.uri_for(c.controller.action_for('form_create')) %]">Admin Create</a>
 [% END %]
 </p>
+
+    <td>------------------[% $toto %]------------</td>
