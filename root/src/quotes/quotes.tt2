@@ -9,7 +9,10 @@
 
 [% # Some basic HTML with a loop to display books -%]
 <table>
-<tr><th>Quotes</th><th>Rating</th><th>Author(s)</th><th>Links</th></tr>
+<tr><th>Quotes</th>
+    <th>Rating</th>
+    <th>Author(s)</th>
+    <th>Links</th></tr>
 [% # Display each book in a table row %]
 [% FOREACH quote IN quotes -%]
   <tr>
@@ -63,4 +66,4 @@
 [% END %]
 </p>
 
-    <td>------------------[% $toto %]------------</td>
+    <td>------------------[% message %]------------</td>

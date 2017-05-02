@@ -68,6 +68,8 @@ sub quotes_list :Chained('quotes') :PathPart('quotes_list') :Args(0) {
 my $toto = '$toto';
     $c->stash($toto => '$toto');
 
+    $c->stash->{message}  = 'Hello World!';
+
     $c->log->debug('________ quote_list s________');
     $c->stash(template => 'quotes/quotes.tt2');
 }

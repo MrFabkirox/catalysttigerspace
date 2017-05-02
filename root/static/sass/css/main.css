@@ -1,6 +1,12 @@
 #header {
     text-align: center;
+    background-color: purple;
 }
+
+#body {
+    background-color: yellow;
+}
+
 #header h1 {
     margin: 0;
 }
