@@ -1,3 +1,8 @@
+<p>
+  Documentation tutorial on the books listing for my own records and practice.
+  Feel free to play with it, the database can be restored quickly and easily.
+</p>
+
 [% # This is a TT comment. -%]
 
 [%- # Provide a title -%]
@@ -57,4 +62,5 @@
   [% END %]
 </p>
 
+<br />
 <td>------------------[% message %]------------</td>
