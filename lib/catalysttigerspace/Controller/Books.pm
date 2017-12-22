@@ -22,11 +22,10 @@ Catalyst Controller.
 =cut
 
 sub index :Path :Args(0) {
-    my ( $self, $c ) = @_;
+  my ( $self, $c ) = @_;
 
-    $c->response->body('Matched catalysttigerspace::Controller::Books in Books.');
+  $c->response->body('Matched catalysttigerspace::Controller::Books in Books.');
 }
-
 
 
 =encoding utf8
@@ -44,29 +43,20 @@ it under the same terms as Perl itself.
 
 __PACKAGE__->meta->make_immutable;
 
-=head2 list
+=head2 book_list
 
-Fetch all book objects and pass to books/list.tt2 in stash to be displayed
+Fetch all book objects and pass to books/book_list.tt2 in stash to be displayed
 
 =cut
 
-sub list :Chained('base') :PathPart('list') :Args(0) {
-    # Retrieve the usual Perl OO '$self' for this object. $c is the Catalyst
-    # 'Context' that's used to 'glue together' the various components
-    # that make up the application
-    my ($self, $c) = @_;
+sub book_list :Chained('base') :PathPart('book_list') :Args(0) {
+  my ($self, $c) = @_;
 
-    # Retrieve all of the book records as book model objects and store in the
-    # stash where they can be accessed by the TT template
-    # But, for now, use this code until we create the model later
-#   $c->stash(books => '');
-    $c->stash(books => [$c->model('DB::Book')->all]);
-#    $c->model('DB::Book')->search({}, {order_by => 'title DESC'});
+#  $c->stash(books => '');
+  $c->stash(books => [$c->model('DB::Book')->all]);
+#  $c->model('DB::Book')->search({}, {order_by => 'title DESC'});
 
-    # Set the TT template to use.  You will almost always want to do this
-    # in your action methods (action methods respond to user input in
-    # your controllers).
-    $c->stash(template => 'books/list.tt2');
+  $c->stash(template => 'books/book_list.tt2');
 }
 
 =head2 object
@@ -77,19 +67,19 @@ it in the stash
 =cut
 
 sub object :Chained('base') :PathPart('id') :CaptureArgs(1) {
-    # $id = primary key of book to delete
-    my ($self, $c, $id) = @_;
+  # $id = primary key of book to delete
+  my ($self, $c, $id) = @_;
 
-    # Find the book object and store it in the stash
-    $c->stash(object => $c->stash->{resultset}->find($id));
+  # Find the book object and store it in the stash
+  $c->stash(object => $c->stash->{resultset}->find($id));
 
-    # Make sure the lookup was successful.  You would probably
-    # want to do something like this in a real app:
-    #   $c->detach('/error_404') if !$c->stash->{object};
-    die "Book $id not found!" if !$c->stash->{object};
+  # Make sure the lookup was successful.  You would probably
+  # want to do something like this in a real app:
+  #   $c->detach('/error_404') if !$c->stash->{object};
+  die "Book $id not found!" if !$c->stash->{object};
 
-    # Print a message to the debug log
-    $c->log->debug("*** INSIDE OBJECT METHOD for obj id=$id ***");
+  # Print a message to the debug log
+  $c->log->debug("*** INSIDE OBJECT METHOD for obj id=$id ***");
 }
 
 =head2 base
@@ -99,13 +89,13 @@ Can place common logic to start chained dispatch here
 =cut
 
 sub base :Chained('/') :PathPart('books') :CaptureArgs(0) {
-    my ($self, $c) = @_;
+  my ($self, $c) = @_;
 
-    # Store the ResultSet in stash so it's available for other methods
-    $c->stash(resultset => $c->model('DB::Book'));
+  # Store the ResultSet in stash so it's available for other methods
+  $c->stash(resultset => $c->model('DB::Book'));
 
-    # Print a message to the debug log
-    $c->log->debug('__________________INSIDE BASE METHOD_____________________');
+  # Print a message to the debug log
+  $c->log->debug('__________________INSIDE BASE METHOD_____________________');
 }
 
 =head2 url_create
@@ -116,36 +106,36 @@ Create a book with the supplied title, rating, and author
 
 
 sub url_create :Chained('base') :PathPart('url_create') :Args(3) {
-    # In addition to self & context, get the title, rating & author_id args
-    # from the URL.  Note that Catalyst automatically puts extra information
-    # after the "/<controller_name>/<action_name/" into @_
-    my ($self, $c, $title, $rating, $author_id) = @_;
+  # In addition to self & context, get the title, rating & author_id args
+  # from the URL.  Note that Catalyst automatically puts extra information
+  # after the "/<controller_name>/<action_name/" into @_
+  my ($self, $c, $title, $rating, $author_id) = @_;
 
-    # Check the user's roles
-    if ($c->check_user_roles('admin')) {
-        # Call create() on the book model object. Pass the table
-        # columns/field values we want to set as hash values
-        my $book = $c->model('DB::Book')->create({
-                title   => $title,
-                rating  => $rating
-            });
+  # Check the user's roles
+  if ($c->check_user_roles('admin')) {
+    # Call create() on the book model object. Pass the table
+    # columns/field values we want to set as hash values
+    my $book = $c->model('DB::Book')->create({
+      title   => $title,
+      rating  => $rating
+    });
 
-        # Add a record to the join table for this book, mapping to
-        # appropriate author
-        $book->add_to_book_authors({author_id => $author_id});
-        # Note: Above is a shortcut for this:
-        # $book->create_related('book_authors', {author_id => $author_id});
+    # Add a record to the join table for this book, mapping to
+    # appropriate author
+    $book->add_to_book_authors({author_id => $author_id});
+    # Note: Above is a shortcut for this:
+    # $book->create_related('book_authors', {author_id => $author_id});
 
-        # Assign the Book object to the stash and set template
-        $c->stash(book     => $book,
-                  template => 'books/create_done.tt2');
+    # Assign the Book object to the stash and set template
+    $c->stash(book     => $book,
+      template => 'books/create_done.tt2');
 
-        #$c->response->header('Cache-Control' => 'no-cache');
+    # $c->response->header('Cache-Control' => 'no-cache');
 
-    } else {
-        # Provide very simple feedback to the user.
-        $c->response->body('Unauthorized!');
-    }
+  } else {
+    # Provide very simple feedback to the user.
+    $c->response->body('Unauthorized!');
+  }
 }
 
 =head2 form_create
@@ -210,8 +200,8 @@ sub delete :Chained('object') :PathPart('delete') :Args(0) {
     # with related 'book_authors' entries
     $c->stash->{object}->delete;
 
-    # Redirect the user back to the list page
-    $c->response->redirect($c->uri_for($self->action_for('list'),
+    # Redirect the user back to the books_list page
+    $c->response->redirect($c->uri_for($self->action_for('books_list'),
         {mid => $c->set_status_msg("Deleted book $id")}));
 }
 

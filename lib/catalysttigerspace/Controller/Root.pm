@@ -18,7 +18,7 @@ catalysttigerspace::Controller::Root - Root Controller for catalysttigerspace
 
 =head1 DESCRIPTION
 
-[enter your description here]
+Recreational Tiger Space
 
 =head1 METHODS
 
@@ -29,6 +29,18 @@ The root page (/)
 =cut
 
 sub index :Path :Args(0) {
+    my ( $self, $c ) = @_;
+
+    $c->stash(template => 'index.tt2');
+}
+
+=head2 catalystindex
+
+The root page (/catalystindex)
+
+=cut
+
+sub catalystindex :Path(/catalystindex) :Args(0) {
     my ( $self, $c ) = @_;
 
     # Hello World
@@ -74,9 +86,9 @@ sub auto :Private {
         # Dump a log message to the development server debug output
         $c->log->debug('***Root::auto User not found, forwarding to /login');
         # Redirect the user to the login page
-        $c->response->redirect($c->uri_for('/login'));
+        # $c->response->redirect($c->uri_for('/login'));
         # Return 0 to cancel 'post-auto' processing and prevent use of application
-        return 0;
+        return 1;
     }
 
     # User found, so return 1 to continue with processing after this 'auto'

@@ -45,7 +45,7 @@ it under the same terms as Perl itself.
 
 __PACKAGE__->meta->make_immutable;
 
-=head2 quote_list
+=head2 quotes
 
 =cut
 
@@ -55,15 +55,11 @@ sub quotes :Chained('/') :PathPart('quotes') :CaptureArgs(0) {
     $c->log->debug('__________________ base __________________');
 }
 
-=cut
-
-__PACKAGE__->meta->make_immutable;
- 
 =head2 quote_list
 
 =cut
 
-sub quotes_list :Chained('quotes') :PathPart('quotes_list') :Args(0) {
+sub quote_list :Chained('quotes') :PathPart('quote_list') :Args(0) {
     my ( $self, $c ) = @_;
 my $toto = '$toto';
     $c->stash($toto => '$toto');
@@ -71,6 +67,6 @@ my $toto = '$toto';
     $c->stash->{message}  = 'Hello World!';
 
     $c->log->debug('________ quote_list s________');
-    $c->stash(template => 'quotes/quotes.tt2');
+    $c->stash(template => 'quotes/quote_list.tt2');
 }
 1;

@@ -18,12 +18,12 @@
 
 <div id="bodyblock">
 <div id="menu">
-    Navigation:
     <ul>
-        <li><a href="[% c.uri_for('/books/list') %]">List</a></li>
-        <li><a href="[% c.uri_for('/quotes/quotes_list') %]">Quotes</a></li>
-        <li><a href="[% c.uri_for('/')
-            %]" title="Catalyst Welcome Page">Welcome</a></li>
+      <li><a href="[% c.uri_for('/') %]">Welcome</a></li>
+      <li><a href="[% c.uri_for('/books/book_list') %]">Books</a></li>
+      <li><a href="[% c.uri_for('/quotes/quote_list') %]">Quotes</a></li>
+      <li><a href="[% c.uri_for('/catalystindex')
+            %]" title="Catalyst Welcome Page">Catalyst</a></li>
     </ul>
 </div><!-- end menu -->
 
