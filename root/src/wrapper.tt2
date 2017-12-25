@@ -24,6 +24,8 @@
       <li><a href="[% c.uri_for('/quotes/quote_list') %]">Quotes</a></li>
       <li><a href="[% c.uri_for('/catalystindex')
             %]" title="Catalyst Welcome Page">Catalyst</a></li>
+      <li><a href="[% c.uri_for('/login') %]">Login</a></li>
+      <li><a href="[% c.uri_for('/logout') %]">Logout</a></li>
     </ul>
 </div><!-- end menu -->
 
