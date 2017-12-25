@@ -1,4 +1,6 @@
-<h2>Bienvenue !</h2>
+[% META title = 'Recreational tiger space' -%]
+
+<h2>Bienvenue</h2>
 
 <p>
   Welcome to my space, dedicated to few of my interest.<br />
