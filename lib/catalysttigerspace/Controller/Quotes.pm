@@ -17,19 +17,6 @@ Catalyst Controller.
 =cut
 
 
-=head2 index
-
-=cut
-
-sub index :Path :Args(0) {
-    my ( $self, $c ) = @_;
-
-    $c->log->debug('__________________ quote index __________________');
-    $c->response->body('Matched catalysttigerspace::Controller::Quotes in Quotes.');
-}
-
-
-
 =encoding utf8
 
 =head1 AUTHOR
@@ -39,7 +26,6 @@ fab,,,
 =head1 LICENSE
 
 This library is free software. You can redistribute it and/or modify
-it under the same terms as Perl itself.
 
 =cut
 
@@ -50,9 +36,12 @@ __PACKAGE__->meta->make_immutable;
 =cut
 
 sub quotes :Chained('/') :PathPart('quotes') :CaptureArgs(0) {
-    my ( $self, $c ) = @_;
+  my ( $self, $c ) = @_;
 
-    $c->log->debug('__________________ base __________________');
+  my $time = localtime(time);
+  print("___________ $time __________quotes \n");
+
+  $c->log->debug('_____________ base ______________');
 }
 
 =head2 quote_list
@@ -60,13 +49,15 @@ sub quotes :Chained('/') :PathPart('quotes') :CaptureArgs(0) {
 =cut
 
 sub quote_list :Chained('quotes') :PathPart('quote_list') :Args(0) {
-    my ( $self, $c ) = @_;
-my $toto = '$toto';
-    $c->stash($toto => '$toto');
+  my ( $self, $c ) = @_;
 
-    $c->stash->{message}  = 'Hello World!';
+  my $toto = '$toto';
+  $c->stash($toto => '$toto');
 
-    $c->log->debug('________ quote_list s________');
-    $c->stash(template => 'quotes/quote_list.tt2');
-}
+  $c->stash->{message}  = 'stash message [.]';
+
+  $c->log->debug('________ quote_list________');
+  $c->stash(template => 'quotes/quote_list.tt2');
+
+  }
 1;

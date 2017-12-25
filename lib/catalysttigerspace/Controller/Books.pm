@@ -52,9 +52,12 @@ Fetch all book objects and pass to books/book_list.tt2 in stash to be displayed
 sub book_list :Chained('base') :PathPart('book_list') :Args(0) {
   my ($self, $c) = @_;
 
+  my $time = localtime(time);
+  print("___________ $time __________book_list \n");
+
 #  $c->stash(books => '');
-  $c->stash(books => [$c->model('DB::Book')->all]);
 #  $c->model('DB::Book')->search({}, {order_by => 'title DESC'});
+  $c->stash(books => [$c->model('DB::Book')->all]);
 
   $c->stash(template => 'books/book_list.tt2');
 }
@@ -91,6 +94,9 @@ Can place common logic to start chained dispatch here
 sub base :Chained('/') :PathPart('books') :CaptureArgs(0) {
   my ($self, $c) = @_;
 
+  my $time = localtime(time);
+  print("___________ $time __________base \n");
+
   # Store the ResultSet in stash so it's available for other methods
   $c->stash(resultset => $c->model('DB::Book'));
 
@@ -104,11 +110,13 @@ Create a book with the supplied title, rating, and author
 
 =cut
 
-
 sub url_create :Chained('base') :PathPart('url_create') :Args(3) {
   # Catalyst automatically puts extra information
   # after the "/<controller_name>/<action_name/" into @_
   my ($self, $c, $title, $rating, $author_id) = @_;
+
+  my $time = localtime(time);
+  print("___________ $time __________url_create \n");
 
   if ($c->check_user_roles('admin')) {
     my $book = $c->model('DB::Book')->create({
@@ -138,10 +146,13 @@ Display form to collect information for book to create
 =cut
 
 sub form_create :Chained('base') :PathPart('form_create') :Args(0) {
-    my ($self, $c) = @_;
+  my ($self, $c) = @_;
 
-    # Set the TT template to use
-    $c->stash(template => 'books/form_create.tt2');
+  my $time = localtime(time);
+  print("___________ $time __________form_create \n");
+
+  # Set the TT template to use
+  $c->stash(template => 'books/form_create.tt2');
 }
 
 =head2 form_create_do
@@ -151,26 +162,29 @@ Take information from form and add to database
 =cut
 
 sub form_create_do :Chained('base') :PathPart('form_create_do') :Args(0) {
-    my ($self, $c) = @_;
+  my ($self, $c) = @_;
 
-    # Retrieve the values from the form
-    my $title     = $c->request->params->{title}     || 'N/A';
-    my $rating    = $c->request->params->{rating}    || 'N/A';
-    my $author_id = $c->request->params->{author_id} || '1';
+  my $time = localtime(time);
+  print("___________ $time __________form_create_do \n");
 
-    # Create the book
-    my $book = $c->model('DB::Book')->create({
-            title   => $title,
-            rating  => $rating,
-        });
-    # Handle relationship with author
-    $book->add_to_book_authors({author_id => $author_id});
-    # Note: Above is a shortcut for this:
-    # $book->create_related('book_authors', {author_id => $author_id});
+  # Retrieve the values from the form
+  my $title     = $c->request->params->{title}     || 'N/A';
+  my $rating    = $c->request->params->{rating}    || 'N/A';
+  my $author_id = $c->request->params->{author_id} || '1';
 
-    # Store new model object in stash and set template
-    $c->stash(book     => $book,
-              template => 'books/create_done.tt2');
+  # Create the book
+  my $book = $c->model('DB::Book')->create({
+    title   => $title,
+    rating  => $rating,
+  });
+  # Handle relationship with author
+  $book->add_to_book_authors({author_id => $author_id});
+  # Note: Above is a shortcut for this:
+  # $book->create_related('book_authors', {author_id => $author_id});
+
+  # Store new model object in stash and set template
+  $c->stash(book     => $book,
+    template => 'books/create_done.tt2');
 }
 
 =head2 delete
@@ -180,22 +194,25 @@ Delete a book
 =cut
 
 sub delete :Chained('object') :PathPart('delete') :Args(0) {
-    my ($self, $c) = @_;
+  my ($self, $c) = @_;
 
-    # Check permissions
-    $c->detach('/error_noperms')
-        unless $c->stash->{object}->delete_allowed_by($c->user->get_object);
+  my $time = localtime(time);
+  print("___________ $time __________delete \n");
 
-    # Saved the PK id for status_msg below
-    my $id = $c->stash->{object}->id;
 
-    # Use the book object saved by 'object' and delete it along
-    # with related 'book_authors' entries
-    $c->stash->{object}->delete;
+  # Check permissions
+  $c->detach('/error_noperms')
+    unless $c->stash->{object}->delete_allowed_by($c->user->get_object);
 
-    # Redirect the user back to the books_list page
-    $c->response->redirect($c->uri_for($self->action_for('books_list'),
-        {mid => $c->set_status_msg("Deleted book $id")}));
+  # Saved the PK id for status_msg below
+  my $id = $c->stash->{object}->id;
+
+  # Use the book object saved by 'object' and delete it along
+  # with related 'book_authors' entries
+  $c->stash->{object}->delete;
+
+  $c->response->redirect($c->uri_for($self->action_for('books_list'),
+    {mid => $c->set_status_msg("Deleted book $id")}));
 }
 
 =head2 list_recent
@@ -213,9 +230,6 @@ sub list_recent :Chained('base') :PathPart('list_recent') :Args(1) {
     $c->stash(books => [$c->model('DB::Book')
                             ->created_after(DateTime->now->subtract(minutes => $mins))]);
 
-    # Set the TT template to use.  You will almost always want to do this
-    # in your action methods (action methods respond to user input in
-    # your controllers).
     $c->stash(template => 'books/list.tt2');
 }
 
@@ -239,9 +253,6 @@ sub list_recent_tcp :Chained('base') :PathPart('list_recent_tcp') :Args(1) {
                 ->title_like('TCP')
         ]);
 
-    # Set the TT template to use.  You will almost always want to do this
-    # in your action methods (action methods respond to user input in
-    # your controllers).
     $c->stash(template => 'books/list.tt2');
 }
 

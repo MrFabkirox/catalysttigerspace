@@ -17,18 +17,6 @@ Catalyst Controller.
 =cut
 
 
-=head2 index
-
-=cut
-
-sub index :Path :Args(0) {
-    my ( $self, $c ) = @_;
-
-    $c->response->body('Matched catalysttigerspace::Controller::Logout in Logout.');
-}
-
-
-
 =encoding utf8
 
 =head1 AUTHOR
@@ -38,7 +26,6 @@ fab,,,
 =head1 LICENSE
 
 This library is free software. You can redistribute it and/or modify
-it under the same terms as Perl itself.
 
 =cut
 
@@ -51,13 +38,15 @@ Logout logic
 =cut
 
 sub index :Path :Args(0) {
-    my ($self, $c) = @_;
+  my ($self, $c) = @_;
 
-    # Clear the user's state
-    $c->logout;
+  my $time = localtime(time);
+  print("___________ $time __________logout \n");
 
-    # Send the user to the starting point
-    $c->response->redirect($c->uri_for('/'));
+  # Clear the user's state
+  $c->logout;
+
+  $c->response->redirect($c->uri_for('/'));
 }
 
 1;

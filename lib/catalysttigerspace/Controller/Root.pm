@@ -26,9 +26,12 @@ The root page (/)
 =cut
 
 sub index :Path :Args(0) {
-    my ( $self, $c ) = @_;
+  my ( $self, $c ) = @_;
 
-    $c->stash(template => 'index.tt2');
+  my $time = localtime(time);
+  print("___________ $time __________index \n");
+
+  $c->stash(template => 'index.tt2');
 }
 
 =head2 catalystindex
@@ -38,10 +41,13 @@ The root page (/catalystindex)
 =cut
 
 sub catalystindex :Path(/catalystindex) :Args(0) {
-    my ( $self, $c ) = @_;
+  my ( $self, $c ) = @_;
 
-    # Hello World
-    $c->response->body( $c->welcome_message );
+  my $time = localtime(time);
+  print("___________ $time __________catalystindex \n");
+
+  # Hello World
+  $c->response->body( $c->welcome_message );
 }
 
 =head2 default
@@ -52,6 +58,7 @@ Standard 404 error page
 
 sub default :Path {
     my ( $self, $c ) = @_;
+
     $c->response->body( 'Page not found' );
     $c->response->status(404);
 }
@@ -62,9 +69,6 @@ Check if there is a user and, if not, forward to login page
 
 =cut
 
-# Note that 'auto' runs after 'begin' but before your actions and that
-# 'auto's "chain" (all from application path to most specific class are run)
-# See the 'Actions' section of 'Catalyst::Manual::Intro' for more info.
 sub auto :Private {
     my ($self, $c) = @_;
 
