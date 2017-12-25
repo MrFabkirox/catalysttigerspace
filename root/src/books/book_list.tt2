@@ -7,6 +7,10 @@
 
 [% # Note That the '-' at the beginning or end of TT code  -%]
 
+<p>
+  Create a new entry <a href="[% c.uri_for('/books/form_create') %]">here</a>.
+</p>
+
 <table>
   <tr>
     <th>Title</th>

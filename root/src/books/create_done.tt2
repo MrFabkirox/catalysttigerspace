@@ -22,7 +22,7 @@ with a rating of [% book.rating %].</p>
 
 [% # Provide a link back to the list page.  'c.uri_for' builds -%]
 [% # a full URI; e.g., 'http://localhost:3000/books/list'      -%]
-<p><a href="[% c.uri_for('/books/list') %]">Return to list</a></p>
+<p><a href="[% c.uri_for('/books/book_list') %]">Return to list</a></p>
 
 [% # Try out the TT Dumper (for development only!) -%]
 <pre>
