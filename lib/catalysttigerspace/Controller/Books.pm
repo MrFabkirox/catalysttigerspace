@@ -24,24 +24,28 @@ Catalyst Controller.
 sub index :Path :Args(0) {
   my ( $self, $c ) = @_;
 
-  $c->response->body('Matched catalysttigerspace::Controller::Books in Books.');
+  $c->log->debug('____ INSIDE INDEX METHOD ____');
+  $c->response->body('catalysttigerspace::Controller::Books');
 }
 
+=head2 base
 
-=encoding utf8
-
-=head1 AUTHOR
-
-fab,,,
-
-=head1 LICENSE
-
-This library is free software. You can redistribute it and/or modify
-it under the same terms as Perl itself.
+Can place common logic to start chained dispatch here
 
 =cut
 
-__PACKAGE__->meta->make_immutable;
+sub base :Chained('/') :PathPart('books') :CaptureArgs(0) {
+  my ($self, $c) = @_;
+
+  my $time = localtime(time);
+  print("____ $time ____base \n");
+
+  # Store the ResultSet in stash so it's available for other methods
+  $c->stash(resultset => $c->model('DB::Book'));
+
+  # Print a message to the debug log
+  $c->log->debug('____ INSIDE BASE METHOD ____');
+}
 
 =head2 book_list
 
@@ -83,25 +87,6 @@ sub object :Chained('base') :PathPart('id') :CaptureArgs(1) {
 
   # Print a message to the debug log
   $c->log->debug("*** INSIDE OBJECT METHOD for obj id=$id ***");
-}
-
-=head2 base
-
-Can place common logic to start chained dispatch here
-
-=cut
-
-sub base :Chained('/') :PathPart('books') :CaptureArgs(0) {
-  my ($self, $c) = @_;
-
-  my $time = localtime(time);
-  print("___________ $time __________base \n");
-
-  # Store the ResultSet in stash so it's available for other methods
-  $c->stash(resultset => $c->model('DB::Book'));
-
-  # Print a message to the debug log
-  $c->log->debug('__________________INSIDE BASE METHOD_____________________');
 }
 
 =head2 url_create
@@ -255,5 +240,19 @@ sub list_recent_tcp :Chained('base') :PathPart('list_recent_tcp') :Args(1) {
 
     $c->stash(template => 'books/list.tt2');
 }
+
+=encoding utf8
+
+=head1 AUTHOR
+
+fab,,,
+
+=head1 LICENSE
+
+This library is free software. You can redistribute it and/or modify
+
+=cut
+
+__PACKAGE__->meta->make_immutable;
 
 1;

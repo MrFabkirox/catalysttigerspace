@@ -17,6 +17,42 @@ Catalyst Controller.
 =cut
 
 
+=head2 quotes
+
+=cut
+
+sub quotes :Chained('/') :PathPart('quotes') :CaptureArgs(0) {
+  my ( $self, $c ) = @_;
+
+  my $time = localtime(time);
+  print("____ $time ____quotes \n");
+
+  $c->log->debug('____ base ____');
+}
+
+=head2 quote_list
+
+=cut
+
+sub quote_list :Chained('quotes') :PathPart('quote_list') :Args(0) {
+  my ( $self, $c ) = @_;
+
+  my $time = localtime(time);
+  print("____ $time ____quote_list \n");
+
+  my $toto = '$toto';
+  $c->stash($toto => '$toto');
+
+  # $c->stash(resultset => $c->model('DB::Quote'));
+  $c->stash(quotes => '');
+
+  $c->stash->{message}  = 'stash message [.]';
+
+  $c->log->debug('____ quote_list ____');
+  $c->stash(template => 'quotes/quote_list.tt2');
+
+  }
+
 =encoding utf8
 
 =head1 AUTHOR
@@ -31,33 +67,4 @@ This library is free software. You can redistribute it and/or modify
 
 __PACKAGE__->meta->make_immutable;
 
-=head2 quotes
-
-=cut
-
-sub quotes :Chained('/') :PathPart('quotes') :CaptureArgs(0) {
-  my ( $self, $c ) = @_;
-
-  my $time = localtime(time);
-  print("___________ $time __________quotes \n");
-
-  $c->log->debug('_____________ base ______________');
-}
-
-=head2 quote_list
-
-=cut
-
-sub quote_list :Chained('quotes') :PathPart('quote_list') :Args(0) {
-  my ( $self, $c ) = @_;
-
-  my $toto = '$toto';
-  $c->stash($toto => '$toto');
-
-  $c->stash->{message}  = 'stash message [.]';
-
-  $c->log->debug('________ quote_list________');
-  $c->stash(template => 'quotes/quote_list.tt2');
-
-  }
 1;

@@ -8,4 +8,32 @@
 soon.
 
 <br />
+
+<table>
+  <tr>
+    <th>Saying</th>
+    <th>Originally from</th>
+    <th>Brought by</th>
+  </tr>
+  [% FOREACH quote IN quotes -%]
+  <tr>
+    <td>[% quote.saying%]</td>
+    <td>[% quote.from %]</td>
+    <td>[% quote.by%]</td>
+    <td>
+      [% tt_authors = [ ];
+      tt_authors.push(author.last_name) FOREACH author = book.authors %]
+      ([% tt_authors.size | html %])
+      [% tt_authors.join(', ') | html %]
+    </td>
+    <td>
+      [% # Add a link to delete a book %]
+      <a href="[%
+        c.uri_for(c.controller.action_for('delete'), [book.id]) %]">Delete</a>
+    </td>
+  </tr>
+  [% END -%]
+</table>
+
+
 <td>------------------[% message %]------------</td>
