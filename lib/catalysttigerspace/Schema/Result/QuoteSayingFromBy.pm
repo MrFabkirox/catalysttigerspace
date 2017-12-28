@@ -1,12 +1,12 @@
 use utf8;
-package catalysttigerspace::Schema::Result::BookAuthor;
+package catalysttigerspace::Schema::Result::QuoteSayingFromBy;
 
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
 
 =head1 NAME
 
-catalysttigerspace::Schema::Result::BookAuthor
+catalysttigerspace::Schema::Result::QuoteSayingFromBy
 
 =cut
 
@@ -34,21 +34,27 @@ extends 'DBIx::Class::Core';
 
 __PACKAGE__->load_components("InflateColumn::DateTime", "TimeStamp", "PassphraseColumn");
 
-=head1 TABLE: C<book_author>
+=head1 TABLE: C<quote_saying_from_by>
 
 =cut
 
-__PACKAGE__->table("book_author");
+__PACKAGE__->table("quote_saying_from_by");
 
 =head1 ACCESSORS
 
-=head2 book_id
+=head2 quote_id
 
   data_type: 'integer'
   is_foreign_key: 1
   is_nullable: 0
 
-=head2 author_id
+=head2 from_id
+
+  data_type: 'integer'
+  is_foreign_key: 1
+  is_nullable: 0
+
+=head2 by_id
 
   data_type: 'integer'
   is_foreign_key: 1
@@ -57,9 +63,11 @@ __PACKAGE__->table("book_author");
 =cut
 
 __PACKAGE__->add_columns(
-  "book_id",
+  "quote_id",
   { data_type => "integer", is_foreign_key => 1, is_nullable => 0 },
-  "author_id",
+  "from_id",
+  { data_type => "integer", is_foreign_key => 1, is_nullable => 0 },
+  "by_id",
   { data_type => "integer", is_foreign_key => 1, is_nullable => 0 },
 );
 
@@ -67,51 +75,68 @@ __PACKAGE__->add_columns(
 
 =over 4
 
-=item * L</book_id>
+=item * L</quote_id>
 
-=item * L</author_id>
+=item * L</from_id>
+
+=item * L</by_id>
 
 =back
 
 =cut
 
-__PACKAGE__->set_primary_key("book_id", "author_id");
+__PACKAGE__->set_primary_key("quote_id", "from_id", "by_id");
 
 =head1 RELATIONS
 
-=head2 author
+=head2 by
 
 Type: belongs_to
 
-Related object: L<catalysttigerspace::Schema::Result::Author>
+Related object: L<catalysttigerspace::Schema::Result::QuoteBy>
 
 =cut
 
 __PACKAGE__->belongs_to(
-  "author",
-  "catalysttigerspace::Schema::Result::Author",
-  { id => "author_id" },
+  "by",
+  "catalysttigerspace::Schema::Result::QuoteBy",
+  { id => "by_id" },
   { is_deferrable => 0, on_delete => "CASCADE", on_update => "CASCADE" },
 );
 
-=head2 book
+=head2 from
 
 Type: belongs_to
 
-Related object: L<catalysttigerspace::Schema::Result::Book>
+Related object: L<catalysttigerspace::Schema::Result::QuoteFrom>
 
 =cut
 
 __PACKAGE__->belongs_to(
-  "book",
-  "catalysttigerspace::Schema::Result::Book",
-  { id => "book_id" },
+  "from",
+  "catalysttigerspace::Schema::Result::QuoteFrom",
+  { id => "from_id" },
+  { is_deferrable => 0, on_delete => "CASCADE", on_update => "CASCADE" },
+);
+
+=head2 quote
+
+Type: belongs_to
+
+Related object: L<catalysttigerspace::Schema::Result::Quote>
+
+=cut
+
+__PACKAGE__->belongs_to(
+  "quote",
+  "catalysttigerspace::Schema::Result::Quote",
+  { id => "quote_id" },
   { is_deferrable => 0, on_delete => "CASCADE", on_update => "CASCADE" },
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07046 @ 2017-04-17 14:09:03
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:e52FscR2neRE5moup76+bQ
+# Created by DBIx::Class::Schema::Loader v0.07047 @ 2017-12-28 22:31:27
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:be0jPkmtjmTH7myJCdSrKw
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration

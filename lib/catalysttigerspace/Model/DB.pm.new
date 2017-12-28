@@ -5,7 +5,7 @@ use base 'Catalyst::Model::DBIC::Schema';
 
 __PACKAGE__->config(
     schema_class => 'catalysttigerspace::Schema',
-
+    
     connect_info => {
         dsn => 'dbi:SQLite:catalysttigerspace.db',
         user => '',

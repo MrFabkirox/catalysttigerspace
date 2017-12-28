@@ -1,1 +1,9 @@
-script/catalysttigerspace_create.pl model DB DBIC::Schema catalysttigerspace::Schema create=static components=TimeStamp,PassphraseColumn dbi:SQLite:catalysttigerspace.db on_connect_do="PRAGMA foreign_keys = ON"
+script/catalysttigerspace_create.pl \
+model DB \
+DBIC::Schema \
+catalysttigerspace::Schema \
+create=static \
+components=TimeStamp,PassphraseColumn \
+dbi:SQLite:catalysttigerspace.db \
+on_connect_do="PRAGMA \
+foreign_keys = ON"
